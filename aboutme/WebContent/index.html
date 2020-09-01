@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+	<title>codeSong의 개발새발</title>
+	<style>
+		body{
+			background-color: grey;
+			margin : 16px;
+			padding: 0px;
+			height: 100%;
+		}
+		
+		header{
+			width: 100%;
+			height : 60px;
+
+			background-color: white;
+			position: relative;
+		}
+		#headerMenu ul{
+			margin:0;
+			padding:0;
+			position: absolute;
+			left: 58%;
+			right:10;	
+		}
+		#headerMenu ul li{
+			margin-top: 14px;
+			margin-right: 16px;
+			list-style: none;
+			background-color: #A2C8E3;
+			color: navy;
+			float: left;
+			line-height: 30px;
+			vertical-align: middle;
+			text-align: center;
+			cursor: pointer;
+		}
+		.headerLink{
+			height: 34px;
+			text-decoration: none;
+			color: navy;
+			display: block;
+			width: 130px;
+			font-sze: 12px;
+			font-weight: bold;
+			font-family: sans-serif;
+		}
+		.headerLink:hover{
+			background: navy;
+			color: white;
+		}
+		
+		
+		section{
+			background: white;
+			height: 800px;
+		}
+		#explain{
+			margin: 16px;
+			padding: 8px;
+			text-align: center;
+		}
+		#explain h1{
+			font-size: 26px;
+		}
+		
+
+		#sectionMenu{
+			width: 100%;
+			height: 100px;
+		}
+		#sectionMenu ul{
+			margin-top: 0;
+			position: absolute;
+			left: 40%;
+			line-height: 100px;
+			vertical-align: middle;
+		}
+		#sectionMenu ul li{
+			width: 100px;
+			height: 100px;
+			list-style: none;
+			background-color: #A2C8E3;
+			color: navy;
+			float: left;
+			text-align: center;
+			cursor: pointer;
+			text-align: center;
+		}
+		#sectionMenu ul li:last-child{
+			margin-left: 16px;
+		}
+		.sectionLink{
+			height: 100px;
+			text-decoration: none;
+			color: white;
+			display: block;
+			width: 100px;
+			font-sze: 12px;
+			font-weight: bold;
+			font-family: sans-serif;	
+		}
+		.sectionLink:hover {
+			background-color: navy;
+			color: white;
+		}
+		
+		#sectionImg{
+			margin-top: 16px;
+			position: absolute;
+			left: 30%;
+		}
+		
+		footer{
+			width: 100%;
+			height: 64px;
+			margin-top: 16px;
+			background-color: white;
+			text-align: center;
+		}
+		footer ]
+	</style>
+</head>
+<body>
+	<header>
+		<nav id="headerMenu"><ul>
+			<li><a href="index.html" class="headerLink">홈</a></li>
+			<li><a href="aboutme.html" class="headerLink">자기소개</a></li>
+			<li><a href="photo.html" class="headerLink">내사진</a></li>
+			<li><a href="../today/TodayServlet.java" class="headerLink">몇시에요</a></li>
+		</ul></nav>
+	</header>
+	<section>
+		<article id="explain">
+			<h1>웹프론트엔드 개발자~! Song</h1>
+			함께 개발하고 같이성장하고 싶어요<br>
+			서울특별시 강동구 어딘가 살고 있어요!<br>			
+		</article>
+		<article id="sectionMenu">
+			<ul>
+				<li><a href="aboutme.html" class="sectionLink">자기소개</a></li>
+				<li><a href="photo.html" class="sectionLink">내사진</a></li>
+			</ul>
+		</article>
+		<article id="sectionImg">
+			<img alt="myhome" src="map.png" width="600" height="480">
+		</article>
+	</section>
+	<footer>
+		<p>jinwoo.song@bigtel.com<br>
+		https://github.com/code-Song</p>
+	</footer>
+</body>
+</html>
