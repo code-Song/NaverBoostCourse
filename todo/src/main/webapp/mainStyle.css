@@ -1,0 +1,81 @@
+
+        body{
+            background-color: lightgray;
+            width: 100%;
+            height: 100%;
+        }
+
+        section{
+            margin: auto;
+            background-color: white;
+            width: 80%;
+            height: 700px;
+        }
+
+        #head{
+            margin-top: 20px;
+            padding: 60px;
+        }
+        #head h1{
+            margin: 0;
+            display: block;
+            float: left;
+        }
+        #head form input{
+            display: block;
+            width: 160px;
+            height: 40px;
+            float: right;
+            background-color: cornflowerblue;
+            border: none;
+            color: white;
+        }
+
+        #content{
+            padding: 60px;
+            padding-top: 20px;
+        }
+        
+        .TODO{
+            width: 32%;
+            float: left;
+        }
+        .TODO div{
+            height: 50px;
+            background-color: darkslategray;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+
+        .DOING{
+            width: 32%;
+            float: left;
+            margin-left: 2%;
+        }
+        .DOING div{
+            height: 50px;
+            background-color: darkslategray;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+
+        .DONE{
+            width: 32%;
+            float: left;
+            margin-left: 2%;
+        }
+        .DONE div{
+            height: 50px;
+            background-color: darkslategray;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+            padding-left: 10px;
+        }
