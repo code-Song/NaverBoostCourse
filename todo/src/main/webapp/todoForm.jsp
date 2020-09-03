@@ -1,40 +1,37 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>regTodo</title>
-	<link href="regStyle.css" rel="stylesheet" type="text/css">
+<meta charset="UTF-8">
+<title>todoë“±ë¡</title>
+	<link href="todoFormStyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-	<section>
-        <article id="head">
-            <h1>ÇÒÀÏ µî·Ï</h1>
-        </article>  
-        <article id="content">
-            <p>¾î¶²ÀÏÀÎ°¡¿ä?</p>
-            <input class="what" type="text" placeholder="swift°øºÎÇÏ±â(24ÀÚ±îÁö)" maxlength="24" checked/><br>
-            <p>´©°¡ ÇÒÀÏÀÎ°¡¿ä?</p>
-            <input class="who" type="text" placeholder="È«±æµ¿" maxlength="24" checked/><br>
-            <p>¿ì¼±¼øÀ§¸¦ ¼±ÅÃÇÏ¼¼¿ä</p>
+<section>
+    <article id="head">
+        <h1>í• ì¼ ë“±ë¡</h1>
+    </article>  
+    <article id="content">
+        <form action="./todoadd" method="POST">
+            <p>ì–´ë–¤ì¼ì¸ê°€ìš”?</p>
+            <input class="title" name="title" type="text" placeholder="swiftê³µë¶€í•˜ê¸°(24ìžê¹Œì§€)" maxlength="24" checked/><br>
+            <p>ëˆ„ê°€ í• ì¼ì¸ê°€ìš”?</p>
+            <input class="name" name="name" type="text" placeholder="ì´ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš”" maxlength="24" checked/><br>
+            <p>ìš°ì„ ìˆœìœ„ë¥¼ ì„ íƒí•˜ì„¸ìš”</p>
             <div class="radio">
-                <input type="radio" name="radioPrior" value="1¼øÀ§" checked="checked">1¼øÀ§
-                <input type="radio" name="radioPrior" value="2¼øÀ§">2¼øÀ§
-                <input type="radio" name="radioPrior" value="3¼øÀ§">3¼øÀ§
+                <input type="radio" name="sequence" value="1" checked="checked">1ìˆœìœ„
+                <input type="radio" name="sequence" value="2">2ìˆœìœ„
+                <input type="radio" name="sequence" value="3">3ìˆœìœ„
             </div>
-        </article>
-        <article id="bottom">
-            <form action="./main.jsp" method="POST">
-                <input type="submit" value="<ÀÌÀü" class="prevTodo">
-            </form>
-            <form action="http://localhost:8080/Todo/main" method="POST">
-                <input type="submit" value="Á¦Ãâ" class="submitTodo">
-            </form>
-            <form>
-                <input type="reset" value="³»¿ëÁö¿ì±â" class="resetTodo">
-            </form>
-        </article>
-    </section> 
+            <input type="reset" value="ë‚´ìš©ì§€ìš°ê¸°" class="resetTodo">
+            <input type="submit" value="ì œì¶œ" class="submitTodo">
+        </form>
+        <form action="./MainServlet" method="POST">
+            <input type="submit" value="<ì´ì „" class="prevTodo">
+        </form>
+    </article>
+</section>    
 </body>
 </html>

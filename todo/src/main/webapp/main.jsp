@@ -1,22 +1,23 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="kr.or.connect.todo.dto.TodoDto"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Todo</title>
 	<link href="mainStyle.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<section>
         <article id="head">
-            <h1>≥™¿« «ÿæﬂ«“ ¿œµÈ</h1>
-            <form action="./TodoFormServlet" method="POST">
-                <input type="submit" value="ªı∑ŒøÓ TODO µÓ∑œ">
+            <h1>ÎÇòÏùò Ìï¥ÏïºÌï† ÏùºÎì§</h1>
+            <!-- ÏÑúÎ∏îÎ¶øÏúºÎ°ú forward -->
+            <form action="./todoform" method="POST">
+                <input type="submit" value="ÏÉàÎ°úÏö¥ TODO Îì±Î°ù">
             </form>
         </article>  
         <article id="content">
@@ -26,9 +27,10 @@
                 	<c:if test="${todo.getType() eq 'TODO'}">
 	                	<div class="items">
 	                		<h4>${todo.getTitle() }</h4>
-	                		<p>µÓ∑œ≥Ø¬• : ${todo.getRegDate() }, ${todo.getName() }, øÏº±º¯¿ß : ${todo.getSequence() }</p>
-	                		<c:set var="todoSel" scope="session" value="${todo.getId() }"/>
+	                		<p>Îì±Î°ùÎÇ†Ïßú : ${todo.getRegDate() }, ${todo.getName() }, Ïö∞ÏÑ†ÏàúÏúÑ : ${todo.getSequence() }</p>
 	                		<form action="./todotype" method="POST">
+	                			<!-- input type="hidden"ÏùÑ ÏÇ¨Ïö©ÌïòÎ©¥ Î≥¥Ïù¥ÏßÑÏïäÏßÄÎßå Ï†ÑÎã¨ÏùÄ ÎêúÎã§. -->
+	                			<input type="hidden" name="id" value="${todo.getId() }">
                         		<input type="submit" class="btn" value="">
                     		</form> 
 	                	</div>
@@ -41,11 +43,11 @@
                 	<c:if test="${todo.getType() eq 'DOING'}">
 	                	<div class="items">
 	                		<h4>${todo.getTitle() }</h4>
-	                		<p>µÓ∑œ≥Ø¬• : ${todo.getRegDate() }, ${todo.getName() }, øÏº±º¯¿ß : ${todo.getSequence() }</p>
-	                		<c:set var="todoSel" scope="session" value="${todo.getId() }"/>
+	                		<p>Îì±Î°ùÎÇ†Ïßú : ${todo.getRegDate() }, ${todo.getName() }, Ïö∞ÏÑ†ÏàúÏúÑ : ${todo.getSequence() }</p>
 	                		<form action="./todotype" method="POST">
+	                			<input type="hidden" name="id" value="${todo.getId() }">
                         		<input type="submit" class="btn" value="">
-                    		</form> 
+                    		</form>
 	                	</div>
                		</c:if>   
                 </c:forEach>
@@ -56,7 +58,7 @@
                 	<c:if test="${todo.getType() eq 'DONE'}">
 	                	<div class="items">
 	                		<h4>${todo.getTitle() }</h4>
-	                		<p>µÓ∑œ≥Ø¬• : ${todo.getRegDate() }, ${todo.getName() }, øÏº±º¯¿ß : ${todo.getSequence() }</p>
+	                		<p>Îì±Î°ùÎÇ†Ïßú : ${todo.getRegDate() }, ${todo.getName() }, Ïö∞ÏÑ†ÏàúÏúÑ : ${todo.getSequence() }</p>
 	                	</div>
                		</c:if>    
                 </c:forEach>

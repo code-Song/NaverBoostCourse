@@ -32,17 +32,17 @@ public class TodoTypeServlet extends HttpServlet {
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		response.setContentType("text/html;charset=UTF-8");
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
 		TodoDao todoDao = new TodoDao();
 		List<TodoDto> list = (List<TodoDto>)request.getSession().getAttribute("todoList");
-		Long selId = Long.valueOf(String.valueOf(request.getSession().getAttribute("todoSel"))); //object type을 long타입으로 바꿔서 저장
+		Long id = Long.valueOf(String.valueOf(request.getParameter("id"))); //object type을 long타입으로 바꿔서 저장
 		
 		//해당 id를 찾아서 type에 따라 type을 바꿔준다.
 		for(TodoDto todo : list) {
-			if(todo.getId() == selId) {
+			if(todo.getId() == id) {
 				if(todo.getType().equals("TODO"))
 					todo.setType("DOING");
 				else if(todo.getType().equals("DOING")) 

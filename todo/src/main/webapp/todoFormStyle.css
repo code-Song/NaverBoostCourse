@@ -30,14 +30,16 @@ body{
         #content p{
             margin: 0;
         }
-        #content .what{
+        #content .title{
+            padding: 0;
             height: 30px;
             width: 100%;
             font-size: 16px;
             margin-top: 10px;
             margin-bottom: 20px;
         }
-        #content .who{
+        #content .name{
+            padding: 0;
             height: 30px;
             width: 50%;
             font-size: 16px;
@@ -54,28 +56,25 @@ body{
             margin-left: 30px;
         }
 
-        #bottom{
-            width: 30%;
-            margin: auto;
-            margin-top: 40px;
-        }
-        #bottom input{
+        .prevTodo{
             width: 100px;
             height: 30px;
-        }
-        #bottom .prevTodo{
             float: left;
             background-color: white;
             border: gray 1px solid;
         }
-        #bottom .submitTodo{
-            float: left;
-            margin-left: 30%;
+        .submitTodo{
+            width: 100px;
+            height: 30px;
+            float: right;
+            margin-right: 20px;
             background-color: cornflowerblue;
             color: white;
             border: none;
         }
-        #bottom .resetTodo{
+        .resetTodo{
+            width: 100px;
+            height: 30px;
             float: right;
             background-color: cornflowerblue;
             color: white;

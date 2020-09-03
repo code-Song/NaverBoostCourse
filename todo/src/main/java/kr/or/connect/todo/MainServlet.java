@@ -27,16 +27,19 @@ public class MainServlet extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		
 		TodoDao todoDao = new TodoDao();
 		List<TodoDto> list = todoDao.getTodos();
 		
-//		request.setAttribute("todoList", list);
 		request.getSession().setAttribute("todoList", list); //세션에 조회한 리스트 저장
+		response.sendRedirect("./main.jsp");
 		
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("./main.jsp");
-		requestDispatcher.forward(request, response);
+		//forward
+//		request.setAttribute("todoList", list);
+//		RequestDispatcher requestDispatcher = request.getRequestDispatcher("./main.jsp");
+//		requestDispatcher.forward(request, response);
 		
-//		response.sendRedirect("./main.jsp");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
